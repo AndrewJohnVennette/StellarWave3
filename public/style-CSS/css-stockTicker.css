@@ -25,6 +25,11 @@
         align-items: center;
         gap: var(--stock-tickerGap);
         animation: scroll var(--stock-tickerScrollSpeed) linear infinite;
+        strong{
+            color: red;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
     }
     &:hover > *{
         animation-play-state: paused;
