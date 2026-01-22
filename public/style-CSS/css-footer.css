@@ -1,14 +1,18 @@
+:root{
+        --footerTextColor: #fff;
+        --footerIconColor: #fff;
+}
 footer{
     position: relative;
     /* width: 100%; */
     height: auto;
     padding: 50px 100px;
-    background: #ccc;
+    background: #000;
     a{
         transition: transform 0.3s;
     }
     a:hover{
-        transform: scale(1.2);
+        transform: scale(1.2) translateX(13px);
         font-weight: 800;
     }
     .container{
@@ -18,12 +22,12 @@ footer{
         gap: 20px;
         .sec h2{
             position: relative;
-            color: #1e1e20;
+            color: var(--footerTextColor);
             font-weight:600;
             margin-bottom: 15px;
         }
         .sec p{
-            color: #555;
+            color:var(--footerTextColor);
         }
         .sci{
             margin: 20px 0 0 0;
@@ -52,7 +56,7 @@ footer{
             ul li{
                 list-style: none;
                 a{
-                    color: #555;
+                    color:var(--footerTextColor);
                     text-decoration: none;
                     margin: 0 0 10px 0;
                     display: inline-block;
@@ -67,20 +71,22 @@ footer{
                 margin: 0 0 16px 0;
             }
             a{
-                color: #555;
+                color: var(--footerTextColor);
                 font-size: 16px;
                 text-decoration: none;
-                margin: 0 0 0 15px;
+                margin: 5% 0 0 15px;
             }
         }
     }
-    .copyrighttext{
+    .copyrighttext {
         width: 100%;
-        background: #fff;
-        padding: 20px 100px 30px;
+        margin: 0;                       /* reset any inherited margin */
+        padding: 20px 5vw 30px;          /* small side padding using viewport units */
+        background: transparent;
         text-align: center;
-        color: #555;
-        border: 1px solid rgba(0, 0, 0, .15);
+        color: var(--footerTextColor);
+        border-top: 1px solid rgba(0, 0, 0, 0.15);
+        box-sizing: border-box;
     }
 }
 
@@ -115,7 +121,7 @@ footer{
 }
 
 .social-icon {
-    color: black;
+    color: var(--footerIconColor);;
     width: 40px; /* Fixed width for the SVG */
     height: 40px; /* Fixed height for the SVG */
     /* border: solid 1px #000; */
