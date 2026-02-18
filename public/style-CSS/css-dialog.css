@@ -25,9 +25,10 @@
 
     /* Gray out the background when dialog is open */
     /* dialog::backdrop {
-      background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-      backdrop-filter: blur(3px);     /* Optional: blur effect */
-    } */
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparent black * /
+      backdrop-filter: blur(3px);     / * Optional: blur effect * /
+    } 
+    */
 
     /* Style buttons */
     /* button {
@@ -47,3 +48,159 @@
 
     /* .open-btn:hover { background: #0056b3; }
     .close-btn:hover { background: #c82333; } */
+
+/********************************************
+*********************************************
+*********************************************
+*********************************************/
+
+/* This namespace ensures styles only apply inside #custom-layout-wrapper */
+        
+        
+
+    #custom-layout-wrapper {
+        /* font-family: 'Arial Bold', sans-serif; */
+        font-family: Poppins, Dancing, sans-serif;;
+        padding: 7vh 3vw 1rem 3vw;
+        color: #fff;
+        & .grid-container {
+            display: grid;
+            /* Creates 3 equal columns */
+            grid-template-columns: repeat(3, 1fr);
+            /* Gap between rows and columns */
+            gap: 3vw;
+            background-color: transparent;  
+            padding: 20px;
+            border-radius: 8px;
+        }
+        & .grid-container{
+            & .column {
+                background: hsl(0 0% 100% / .07);
+                backdrop-filter: blur(2.2rem);
+                padding: 20px;
+                border: 1px solid #b0bce5;
+                border-radius: 10px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+                padding: 0;
+                /* width: 30%; */
+                & h2{
+                    background-color: rgba(92, 54, 229, 0.1);
+                    backdrop-filter: blur(2.2rem);
+                    height: 20%;
+                    padding: 2vh 0 0 0;
+                    width: 100%;
+                    font-size: 1.7rem;
+                    height: 173px;
+                    min-height: 7rem;
+                    text-align: center;
+                    margin: 0 0 auto 0;
+                    display: flex;
+                    align-items: center;      /* Vertical center */
+                    justify-content: center;
+                    color: #fff;
+                    text-transform: uppercase;
+                    border-radius: 10px 10px 0 0;
+                }
+                & p{
+                    color: #fff;
+                    /* margin: 25px 55px; */
+                    font-size: 1.55rem;
+                    & a{
+                        display: block;
+                        text-decoration: none;
+                        text-align: center;
+                        margin: 7px 0;
+                    }
+                }
+                & ol{
+                    /* margin: 25px 55px;; */
+                    & li{
+                        font-size: 1.65rem;
+                        margin: 7px 3px;
+                    }
+                    & li::marker{
+                        font-weight: 900;
+                        color: red;
+                    }
+                }
+                & p, & ol{
+                    line-height: 1.25;
+                    margin: 25px 55px;
+                }
+            }
+        }
+    }
+
+    .blink-01{
+        /* animation: blinkType01 1s steps(1, end) infinite ; */
+        animation: blinkType01 2s infinite ;
+    }
+    .blink-02{
+        /* animation: blinkType01 1s steps(1, end) infinite ; */
+        animation: blinkType02 3s infinite ;
+    }
+    .blink-03{
+        /* animation: blinkType01 1s steps(1, end) infinite ; */
+        animation: blinkType03 1s infinite ;
+    }
+
+    @keyframes blinkType01 {
+        0%{
+            opacity: 1;
+        }
+        50%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    @keyframes blinkType02 {
+        0%{
+            opacity: 1;
+            color: rgb(146, 226, 146);
+        }
+        25%{
+            opacity: 1;
+            color: rgb(144, 68, 68);
+        }
+        50%{
+            opacity: 1;
+            color: rgb(51, 41, 128);
+        }
+        75%{
+            opacity: 1;
+            color: rgb(177, 208, 22);
+        }
+        100%{
+            opacity: 0;
+            color: rgb(147, 21, 101);
+        }
+    }
+    @keyframes blinkType03 {
+        0%{
+            opacity: 1;
+        }
+        50%{
+            opacity: 0;transform: scale(2);
+        }
+        51%{
+            opacity: 0;
+            transform: scale(0);
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+
+
+
+        /* Responsive adjustment: stack columns on small screens */
+        @media (max-width: 768px) {
+            #custom-layout-wrapper{ 
+                .grid-container {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }

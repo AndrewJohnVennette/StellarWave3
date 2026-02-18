@@ -3,11 +3,13 @@
         --footerIconColor: #fff;
 }
 footer{
-    position: relative;
+    
+    position: none;
     /* width: 100%; */
     height: auto;
     padding: 50px 100px;
     background: #000;
+    bottom: 0;
     a{
         transition: transform 0.3s;
     }

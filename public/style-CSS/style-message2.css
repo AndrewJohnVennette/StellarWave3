@@ -1,0 +1,51 @@
+
+
+/* --- Encapsulated Main (3-Column Grid) --- */
+#main-content {
+    display: grid;
+    /* Desktop: 3 equal columns */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    & .grid-item {
+        background: #fdfdfd;
+        border: 1px solid #eee;
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+        /* Vertically center content inside the column */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: transform 0.3s ease;
+    }
+    & .grid-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+}
+
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Tablet: 2 Columns */
+@media (max-width: 992px) {
+    #main-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile: 1 Column */
+@media (max-width: 600px) {
+    #main-content {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    
+    /* #main-header {
+        padding: 40px 10px;
+    } */
+}

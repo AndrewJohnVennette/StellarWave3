@@ -1,40 +1,15 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
-body{
-    margin: 0;
-    background-color: #000;
-    color: #eee;
-    font-family: Poppins;
-    font-size: 12px;
+:root{
+    /* --carouselTopicFontSize: clamp(
+        2.25rem,                       
+        calc(3.5rem * .7 - 1.5vw),    
+        3.05rem                        
+    ); */
+    --carouselTopicFontSize: 4.5rem;
+    --thumbnailWidth: 150px;
+    --thumbnailHeight: 220px;
 }
-a{
-    text-decoration: none;
-}
-header{
-    /* width: 1140px; */
-    /* max-width: 90%; */
-    /* margin: auto; */
-    /* height: 50px;
-    
-    position: relative;
-    z-index: 100; */
 
-    
-    /* background: rgba(192, 208, 196, 0.1);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.6px);
-    -webkit-backdrop-filter: blur(7.6px);
-    border: 1px solid rgba(192, 208, 196, 0.35); */
-    /* nav{
-        margin: 0 0 0 10%;
-    } */
 
-}
-/* From https://css.glass */
-/* header a{
-    color: #eee;
-    margin-right: 40px;
-} */
 /*********************** carousel ***********************/
 .carousel{
     height: 100vh;
@@ -70,7 +45,7 @@ header{
                 letter-spacing: 10px;
             }
             .title, .topic{
-                font-size: 4.5em;
+                font-size: var(--carouselTopicFontSize);
                 font-weight: bold;
                 line-height: 1.3em;
             }
@@ -111,8 +86,8 @@ header{
     display: flex;
     gap: 20px;
     .item{
-        width: 150px;
-        height: 220px;
+        width: var(--thumbnailWidth);
+        height: var(--thumbnailHeight);
         flex-shrink: 0;
         position: relative;
         img{
@@ -319,11 +294,108 @@ header{
         opacity: 0;
     }
 }
-@media screen and (max-width: 678px) {
+
+/*********************** Responsive ***********************/
+/* Small tweaks only when screen is very narrow (< 360px) */
+@media (max-width: 360px) {
+
+}
+
+@media (max-width: 678px) {
     .carousel .list .item .content{
         padding-right: 0;
-        .title{
-            font-size: 30px;
+        .title, .topic{
+            /* font-size: 30px; */
         }
     }
+    :root{
+        --carouselTopicFontSize: 30px;
+        --thumbnailWidth: 65px;
+        --thumbnailHeight: 90px;
+    }
+}
+
+/* Tablets and up */
+@media (min-width: 768px) {
+
+}
+
+/* Small desktop / laptop */
+@media (min-width: 1024px) {
+
+}
+
+/* Large desktop */
+@media (min-width: 1280px) {
+
+}
+
+
+
+
+
+
+/* ==========================================================================
+    DESKTOP-FIRST MEDIA QUERIES
+    Start with large desktop styles (no media query = default)
+    Then reduce / adapt as screen gets smaller
+   ========================================================================== */
+
+/* ───────────────────────────────────────────────
+    Very large screens / 4K-ready / ultra-wide (optional)
+    ≥ 1536px or 1920px — many people cap container here
+   ─────────────────────────────────────────────── */
+@media (min-width: 1536px) {
+
+}
+
+/* ───────────────────────────────────────────────
+    Large desktop (most common wide desktop start)
+    ≥ 1280px — very popular xl breakpoint
+   ─────────────────────────────────────────────── */
+@media (min-width: 1280px) {
+
+}
+
+/* ───────────────────────────────────────────────
+    Standard desktop / small laptop
+    ≥ 1024px — classic lg breakpoint (Tailwind lg, many projects)
+   ─────────────────────────────────────────────── */
+@media (min-width: 1024px) {
+
+}
+
+/* ───────────────────────────────────────────────
+    Tablet landscape / medium screens
+    ≥ 768px — extremely common md / tablet point
+   ─────────────────────────────────────────────── */
+@media (min-width: 768px) {
+
+}
+
+/* ───────────────────────────────────────────────
+    Large mobile / small tablet / phone landscape
+    ≥ 640px — Tailwind sm / very popular transition
+   ─────────────────────────────────────────────── */
+@media (min-width: 640px) {
+
+}
+
+/* ───────────────────────────────────────────────
+    Small mobile / typical cellphone portrait
+    ≤ 639px — this is the "mobile" range in many projects
+    (styles here override larger ones when screen shrinks)
+   ─────────────────────────────────────────────── */
+@media (max-width: 639px) {
+
+}
+
+/* ───────────────────────────────────────────────
+    Very small phones (old devices, narrow viewports)
+    ≤ 360px — useful for extra tweaks
+   ─────────────────────────────────────────────── */
+@media (max-width: 360px) {
+    /* :root{
+        --carouselTopicFontSize: 2.5em;
+    } */
 }

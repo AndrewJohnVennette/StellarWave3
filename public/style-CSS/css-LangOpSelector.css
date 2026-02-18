@@ -56,7 +56,7 @@ a.active{
         appearance: base-select;
     }
     select{
-        width: 110px;
+        width: 135px;
         padding: 0px 1px;
     }
     selectedcontent,
