@@ -3,15 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
-    <link rel="stylesheet" href="style-CSS/style-message.css">
+    <!-- <link rel="manifest" href="/site.webmanifest"> -->
+
+
+
+    <title>STELLARWAVE5</title>
+    <style>
+        body{
+            background-image: url(/imagestar/star-bottle-1.webp);
+        }
+    </style>
+    <link rel="stylesheet" href="style-CSS/homeStyle.css">
     <link rel="stylesheet" href="style-CSS/navBarStyle.css">
-    <script src="code-JS/navBarStyle.js" defer></script>
     <link rel="stylesheet" href="style-CSS/css-footer.css">
-    <title>Grid Responsive</title>
+    <link rel="stylesheet" href="style-CSS/css-LangOpSelector.css">
+    <link rel="stylesheet" href="style-CSS/css-dialog.css">
+    <link rel="stylesheet" href="style-CSS/css-stockTicker.css">
+    <link rel="stylesheet" href="style-CSS/css-infiniteSlider.css">
+    <script type="speculationrules">
+        {
+            "prerender": [{
+                        "where": { "selector_matches": ".prerender" }
+            }],
+            "prefetch": [{
+                        "where": { "selector_matches": ".prefetch" }
+            }]
+        }
+    </script>
+    <script src="code-JS/navBarStyle.js" defer></script>
+    <script src="code-JS/textTransition.js"></script>
 </head>
-<body class="loveInfo">
-        <header id="GEV-navBar" class="flex">
+<body>
+    <header id="GEV-navBar" class="flex">
         <div class="logo">
             <img src="/images/favicon.png" alt="Logo of Corp" class="logo">
         </div>
@@ -86,46 +111,42 @@
             </ul>
         </nav>
     </header>
-    <!-- <h1>Responsive Grid</h1> -->
-    <section class="grid-container-info">
-        <article class="card">
-            <h2>Enviar tu mensaje es simple:</h2>
-            <div class="glass">
+    <main id="custom-layout-wrapper">
+        <section class="grid-container">
+            <article class="column">
+                <h2>Sending your message is easy:</h2>
                 <ol>
-                    <li>Escribe lo que quieras compartir</li>
-                    <li>Nosotros lo codificamos y lo convertimos en un pulso láser.</li>
-                    <li>Lo transmitimos desde nuestra estación terrestre hacia el espacio profundo.</li>
-                    <li>Cada mensaje queda registrado en nuestra cápsula digital, y puedes ver cuándo y hacia dónde fue enviado. </li>
-                    <li>Usamos tecnología de vanguardia para garantizar que tu luz viaje lo más lejos posible.</li>
-                    <li>Te haremos llegar una constancia de que reenviamos lo que nos mandaste</li>
-                </ol>    
-            </div>
-        </article>
-        <article class="card">
-            <h2>ENVIA TU MENSAJE DE AMOR, MAS ALLA DEL TIEMPO</h2>
-            <div class="glass">
-                <p>En un universo donde las estrellas guardan secretos milenarios, tú puedes dejar una huella que trascienda el tiempo. Esta sección está dedicada a los mensajes que nacen del amor: cartas, promesas, recuerdos, suspiros.</p>
-                <p><a class="blink-03" href="payment.html">Para enviar tu Mensaje, solo debes hacer Click aquí.<a/></p>
-                <p>Aquí, cada palabra enviada se convierte en luz, viajando por el vacío cósmico como testimonio de lo que sentimos. Porque el amor no tiene fronteras, y ahora tampoco tiene límite.</p>
-                <p>No es solo una carta, tu mensaje de amor, es una ofrenda al cosmos, una declaración que trasciende generaciones, idiomas, planetas y se queda por toda la eternidad. Porque el amor, merece ser escuchado incluso en el silencio del espacio. Cada palabra enviada es una luz de esperanza, una promesa de que, sin importar dónde o cuándo, te recuerda que el amor sigue siendo nuestro lenguaje más universal.</p>
-            </div>
-        </article>
-        <article class="card">
-            <h2>¿Como se lanzará tu mensaje de amor hacia el espacio?</h2>
-            <div class="glass">
-                <!-- <p>Siempre hemos mirado al cielo con curiosidad. Hoy, con un poco de tecnología láser y mucha onda, podés enviar tus ideas, emociones o lo que se te ocurra directo al universo. Esta página te da la chance de sumarte a esta aventura cósmica. Tu mensaje va a salir disparado como un rayo de luz, cruzando el cielo y flotando por ahí, quién sabe hasta dónde. </p>
-                <p>La comunicación interestelar ya no es solo ciencia ficción. Con tecnología láser de alta precisión, ahora es posible transmitir pensamientos, emociones y datos más allá de la atmósfera terrestre. </p>
-                <p>Desde que aprendimos a mirar el cielo con asombro, hemos buscado respuestas entre las estrellas. Hoy, gracias a la luz láser, podemos enviar nuestras propias palabras al universo. Esta página te invita a formar parte de esta travesía cósmica: tu mensaje cruzará la atmósfera y viajará como un destello hacia lo desconocido, dejando una huella luminosa en el infinito. </p> -->
+                    <li>Write whatever you want to share</li>
+                    <li>We encode it and turn it into a laser pulse.</li>
+                    <li>We beam it from our Earth station out into deep space.</li>
+                    <li>Each message is logged in our digital capsule — you can check exactly when and in which direction it was sent. </li>
+                    <li>We use state-of-the-art technology to make sure your light travels the greatest possible distance.</li>
+                    <li>We’ll provide you with confirmation that we successfully transmitted what you sent us.</li>
+                </ol>
+            </article>
+        <article class="column">
+                <h2>SEND YOUR LOVE MESSAGE, BEYOND TIME</h2>
                 <p>
-                    Tu mensaje de amor será lanzado al espacio, utilizando el codigo binario, <strong>lenguaje universal, que es utilizado por la NASA y otros científicos para enviar mensajes al espacio</strong>. Aunque no es un “idioma” en el sentido humano, su simplicidad lo convierte en una herramienta poderosa para la comunicación interestelar.  
-Toda la electrónica moderna, desde las computadoras hasta los radiotelescopios, está construida sobre la base del sistema binario. Las naves espaciales, los satélites y las estaciones terrestres de la NASA no son una excepción.
-No solamente los mensajes, sino también la comunicación con las naves espaciales a través de la Red de Espacio Profundo (DSN) de la NASA se realizan a través de ondas de radio. Estas ondas de radio llevan la información codificada en binario, que luego es decodificada por las computadoras en la Tierra. El proceso es similar al de tu teléfono móvil, y al que utilzamos nosotros para enviar mensajes al espacio, pero a una escala mucho mayor.
-En resumen, el código binario no es solamente para enviar mensajes, sino tambien es utilzado por la NASA y por todas las agencia espaciales como un lenguaje intrínseco de la tecnología digital que hace posible la exploración espacial. 
-
+                    In a universe where stars have been holding secrets for millennia, you get to leave a mark that outlives time itself.
+                    <a class="blink-02" href="payment.html">To send your Message, just click here.</a>
+                    This whole section is made for messages born from love: letters, promises, memories, little sighs that mean everything.  Here, every word you send turns into light—traveling through the cosmic void as living proof of what we feel.
+                    Because love knows no borders… and now it knows no limits either.   This isn’t just a letter.
+                    Your love message becomes an offering to the cosmos, a declaration that crosses generations, languages, planets—and stays there for all eternity.
+                    Because love deserves to be heard even in the total silence of space.  Every word you launch is a beam of hope, a quiet promise that no matter where or when, it reminds the universe:
+                    love is still our most universal language.   Drop your heart into the stars. Let it shine forever.
                 </p>
-            </div>
-        </article>
-    </section>
+            </article>
+            <article class="column">
+                <h2>How will your love message actually get launched into space?</h2>
+                <p>
+                    Your love message is gonna get blasted into space using binary code — that universal language the NASA and other space scientists straight-up use to send messages out there.  It’s not an “idioma” like Spanish or English, but its dead-simple setup makes it insanely powerful for talking across the stars.  Pretty much every piece of modern electronics—from your laptop to giant radio telescopes—is built on binary at its core. Spacecraft, satellites, NASA’s ground stations? All of ’em run on it. No exceptions.  It’s not just messages either. When NASA chats with deep-space probes through their Deep Space Network (DSN), those radio waves are carrying binary-encoded data that gets decoded back on Earth by computers.  The whole thing works basically the same way your phone sends texts or your Wi-Fi streams Netflix… just on a ridiculously bigger, cosmic scale.  Bottom line: binary isn’t some random nerd trick for sending messages.
+                    It’s the built-in language of all digital tech — the exact same system NASA and every space agency on the planet uses to make space exploration even possible.  So when you send your love message here, you’re literally speaking the same “language” the Voyager probes used to say hi to the galaxy.
+                    Your heart, turned into 1s and 0s, riding radio waves forever.
+                </p>
+            </article>
+        </section>
+    </main>
+    <br><br><br><br><br>
     <footer>
         <div class="container">
             <section class="sec aboutus">
@@ -151,11 +172,11 @@ En resumen, el código binario no es solamente para enviar mensajes, sino tambie
                             <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m13.081 10.712l-4.786-6.71a.6.6 0 0 0-.489-.252H5.28a.6.6 0 0 0-.488.948l6.127 8.59m2.162-2.576l6.127 8.59a.6.6 0 0 1-.488.948h-2.526a.6.6 0 0 1-.489-.252l-4.786-6.71m2.162-2.576l5.842-6.962m-8.004 9.538L5.077 20.25"/></svg>
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="https://facebook.com" class="social-link">
                             <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" viewBox="0 0 16 16"><path fill="currentColor" d="M1.5 0L0 2.5V14h4v2h2l2-2h2.5L15 9.5V0H1.5zM13 8.5L10.5 11H8l-2 2v-2H3V2h10v6.5z"/><path fill="currentColor" d="M9.5 4H11v4H9.5V4zm-3 0H8v4H6.5V4z"/></svg>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </section>
             <section class="sec quicklinks">
@@ -171,7 +192,7 @@ En resumen, el código binario no es solamente para enviar mensajes, sino tambie
                             <p>Privacy Policy</p>
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="http://" target="_blank" rel="noopener noreferrer">
                             <p>Help</p>
                         </a>
@@ -180,10 +201,10 @@ En resumen, el código binario no es solamente para enviar mensajes, sino tambie
                         <a href="http://" target="_blank" rel="noopener noreferrer">
                             <p>Contact</p>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </section>
-            <section class="sec quicklinks">
+            <!-- <section class="sec quicklinks">
                 <h2>Shop</h2>
                 <ul>
                     <li>
@@ -207,16 +228,16 @@ En resumen, el código binario no es solamente para enviar mensajes, sino tambie
                         </a>
                     </li>
                 </ul>
-            </section>
+            </section> -->
             <section class="sec contact">
                 <h2>Contact Us</h2>
                 <ul>
-                    <li>
+                    <!-- <li>
                         <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" viewBox="0 0 1536 1536"><path fill="currentColor" d="M1280 1065q0-11-2-16t-18-16.5t-40.5-25T1172 981t-45.5-25t-28.5-15q-5-3-19-13t-25-15t-21-5q-15 0-36.5 20.5t-39.5 45t-38.5 45T885 1039q-7 0-16.5-3.5T853 1029t-17-9.5t-14-8.5q-99-55-170-126.5T525 714q-2-3-8.5-14t-9.5-17t-6.5-15.5T497 651q0-13 20.5-33.5t45-38.5t45-39.5T628 503q0-10-5-21t-15-25t-13-19q-3-6-15-28.5T555 364t-26.5-47.5t-25-40.5t-16.5-18t-16-2q-48 0-101 22q-46 21-80 94.5T256 503q0 16 2.5 34t5 30.5t9 33t10 29.5t12.5 33t11 30q60 164 216.5 320.5T843 1230q6 2 30 11t33 12.5t29.5 10t33 9t30.5 5t34 2.5q57 0 130.5-34t94.5-80q22-53 22-101zm256-777v960q0 119-84.5 203.5T1248 1536H288q-119 0-203.5-84.5T0 1248V288Q0 169 84.5 84.5T288 0h960q119 0 203.5 84.5T1536 288z"/></svg>
                         <a href="tel:+12345678900" class="social-link">
                             +1(234)567-8900
                         </a>
-                    </li>
+                    </li> -->
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" viewBox="0 0 48 48"><mask id="ipSMaillOne0"><g fill="none" stroke-width="4"><path fill="#fff" stroke="#fff" d="M39 6H9a3 3 0 0 0-3 3v30a3 3 0 0 0 3 3h30a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3Z"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M36 16H12v16h24V16Z"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="m36 16l-12 8l-12-8"/></g></mask><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipSMaillOne0)"/></svg>
                         <a href="mailto:test@mail.com" class="social-link">
@@ -230,5 +251,7 @@ En resumen, el código binario no es solamente para enviar mensajes, sino tambie
             <p>StellarWave Copyright 2025 Online space messages. All Rights Reserved</p>
         </div>
     </footer>
+    
+    <script src="code-JS/app.js"></script>
 </body>
 </html>
