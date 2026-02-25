@@ -58,6 +58,8 @@ a.active{
     select{
         width: 135px;
         padding: 0px 1px;
+        background-color:transparent;
+        color: #fff;
     }
     selectedcontent,
     option{
