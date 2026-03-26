@@ -60,8 +60,19 @@ a.active{
         padding: 0px 1px;
         background-color:transparent;
         color: #fff;
+        svg.flagSettings{
+            height: 20px;
+        }
     }
-    selectedcontent,
+    select .placeholder-select{
+        svg{
+            height: 7px;
+        }
+    }
+    select .placeholder-select:invalid{
+        color: red;
+    }
+    .selectedcontent,
     option{
         /* margin: 1px 0 0 20px; */
         display: flex;
